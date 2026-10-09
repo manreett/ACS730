@@ -14,4 +14,13 @@ We can't use OIDC in this lab because AWS Academy blocks IAM write permissions l
 ## Terraform Version
 - Terraform version used: 1.10.3
 
+## Experiments
+
+### Experiment 1: Credential Expiry
+- **Prediction**:If the Vocareum session time expires or the lab is ended ,there will be failure of the credential creation or aws sts get-caller-identity phase with ExpiredToken exception.
+- **Observation**: The re-run of the workflow after the session completion led to STS token authentication failure with the `ExpiredToken` error. The use of `refresh-gha-creds.sh` after initiating a new session resolved the problem without changing anything in the repositories.
+
+### Experiment 2: State File Locking and Concurrency
+- **Prediction**: If `cancel-in-progress` was set to `true`, and multiple commits were made, a `terraform apply` could be interrupted midway, potentially causing orphaned cloud resources or state lock problems.
+- **Observation**: Unlike automated test , `terraform apply` must run sequentially to completion . Without concurrency groups, `use_lockfile` in S3 rejects concurrent apply operations to prevent state corruption.
 
