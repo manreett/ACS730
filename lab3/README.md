@@ -1,4 +1,4 @@
-# Lab 3 - Terraform Basics and Your First Pipeline
+# Lab 3 - Terraform Basics and  First Pipeline
 
 ### Why use OIDC in a real AWS account?
 In real account setup, using OpenID Connect (OIDC) lets GitHub Actions to get temporary credentials from AWS STS dynamically for each run rather than relying on creating, managing, and rotating our access key pairs that could potentially leaked.
