@@ -1,6 +1,9 @@
 *.pem
 *.tfstate
+*.tfstate.*
 *.tfstate.backup
-.terraform/
 .env
+.terraform/
+crash.log
 credentials
+tfplan
