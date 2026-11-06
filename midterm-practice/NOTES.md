@@ -2,8 +2,4 @@
 
 ## Task 5: git hygiene
 
-<!-- Replace this line with one sentence explaining why deleting the .tfstate
-     file and the credential string in your latest commit is not sufficient
-     by itself. -->
-
-TODO
+Deleting a .tfstate file or credential string in a subsequent commit only removes it from the current branch tip, but Git is an immutable, append-only directed acyclic graph (DAG), meaning the sensitive plaintext data remains permanently stored and retrievable throughout the repository's commit history unless purged with history-rewriting tools like git filter-repo or BFG.
