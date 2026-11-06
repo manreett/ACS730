@@ -1,6 +1,6 @@
 name: Midterm Practice CI
 
-# This workflow is not doing its job. Task 2.
+# ACS730 Midterm Practical -- CI workflow
 
 on:
   push:
