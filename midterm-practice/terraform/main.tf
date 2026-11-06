@@ -1,9 +1,4 @@
-# ACS730 midterm practice -- LocalStack-targeted network.
-#
-# Everything lives in one file on purpose: Terraform loads every .tf file in a
-# directory and does not care about the names.
-#
-# This configuration does not currently pass `terraform validate`. Tasks 3 and 4.
+# ACS730 midterm practice -- LocalStack-targeted network. Tasks 3 & 4 fixed.
 
 variable "aws_region" {
   description = "Region to deploy into. LocalStack ignores it, but the provider still requires one."
@@ -85,7 +80,6 @@ variable "localstack_endpoint" {
 provider "aws" {
   region = var.aws_region
 
-  # LocalStack wants the shape of a credential, not a real one.
   access_key = var.use_localstack ? "test" : null
   secret_key = var.use_localstack ? "test" : null
 
@@ -170,7 +164,7 @@ resource "aws_route_table" "public" {
 resource "aws_route_table_association" "public" {
   for_each = var.public_subnets
 
-  subnet_id      = aws_subnet.public.id
+  subnet_id      = aws_subnet.public[each.key].id
   route_table_id = aws_route_table.public.id
 }
 
@@ -180,7 +174,7 @@ resource "aws_security_group" "web" {
   vpc_id      = aws_vpc.main.id
 
   dynamic "ingress" {
-    for_each = var.ingress_port
+    for_each = var.ingress_ports
 
     content {
       description = "Inbound TCP ${ingress.value}"
