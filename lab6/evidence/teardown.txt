@@ -1,35 +1,23 @@
-Terminating instances: i-02e7d0a83e84a57a5	i-08f32f02ad28e49be
-{
-    "TerminatingInstances": [
-        {
-            "InstanceId": "i-08f32f02ad28e49be",
-            "CurrentState": {
-                "Code": 32,
-                "Name": "shutting-down"
-            },
-            "PreviousState": {
-                "Code": 16,
-                "Name": "running"
-            }
-        },
-        {
-            "InstanceId": "i-02e7d0a83e84a57a5",
-            "CurrentState": {
-                "Code": 32,
-                "Name": "shutting-down"
-            },
-            "PreviousState": {
-                "Code": 16,
-                "Name": "running"
-            }
-        }
-    ]
-}
-{
-    "Return": true,
-    "DeleteSnapshotResults": []
-}
-remove_bucket: acs730-lab6-ssm-496177904282
+      [31m-[0m[0m "i-0f11cae1e9880981a",
+      [31m-[0m[0m "i-03828a6df68abaa43",
+    ] [90m-> null[0m[0m
+  [31m-[0m[0m web_public_ips      = [
+      [31m-[0m[0m "54.235.50.34",
+      [31m-[0m[0m "54.172.31.212",
+    ] [90m-> null[0m[0m
+[0m[1maws_instance.web[1]: Destroying... [id=i-03828a6df68abaa43][0m[0m
+[0m[1maws_instance.web[0]: Destroying... [id=i-0f11cae1e9880981a][0m[0m
+[0m[1maws_instance.web[0]: Still destroying... [id=i-0f11cae1e9880981a, 10s elapsed][0m[0m
+[0m[1maws_instance.web[1]: Still destroying... [id=i-03828a6df68abaa43, 10s elapsed][0m[0m
+[0m[1maws_instance.web[1]: Still destroying... [id=i-03828a6df68abaa43, 20s elapsed][0m[0m
+[0m[1maws_instance.web[0]: Still destroying... [id=i-0f11cae1e9880981a, 20s elapsed][0m[0m
+[0m[1maws_instance.web[0]: Destruction complete after 30s[0m
+[0m[1maws_instance.web[1]: Destruction complete after 30s[0m
+[0m[1maws_security_group.web: Destroying... [id=sg-0e3961febc0f4fbdb][0m[0m
+[0m[1maws_security_group.web: Destruction complete after 1s[0m
+[0m[1m[32m
+Destroy complete! Resources: 3 destroyed.
+[0mremove_bucket: acs730-lab6-ssm-496177904282
 
 == EC2 instances
    i-0cb20656437f102e3  running  t3.micro  acs730-workstation   (your workstation -- keep this)
@@ -43,8 +31,6 @@ remove_bucket: acs730-lab6-ssm-496177904282
 == Non-default security groups
    sg-040951b47cc189d57  launch-wizard-2
       -> aws ec2 delete-security-group --group-id sg-040951b47cc189d57
-   sg-04887a8ceb8e8127a  asc730-lab6-sg
-      -> aws ec2 delete-security-group --group-id sg-04887a8ceb8e8127a
    sg-089f8d17242fbf23f  launch-wizard-1
       -> aws ec2 delete-security-group --group-id sg-089f8d17242fbf23f
 
