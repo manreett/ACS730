@@ -1,0 +1,1198 @@
+=== DESTROY PROD ===
+[0m[1mmodule.web_stack.data.aws_ami.al2023: Reading...[0m[0m
+[0m[1mmodule.web_stack.data.aws_region.current: Reading...[0m[0m
+[0m[1mmodule.web_stack.data.aws_availability_zones.available: Reading...[0m[0m
+[0m[1mmodule.web_stack.data.aws_ssm_parameter.db_password: Reading...[0m[0m
+[0m[1mmodule.web_stack.aws_vpc.main: Refreshing state... [id=vpc-0acef1a7570ca48ec][0m
+[0m[1mmodule.web_stack.data.aws_region.current: Read complete after 0s [id=us-east-1][0m
+[0m[1mmodule.web_stack.data.aws_availability_zones.available: Read complete after 0s [id=us-east-1][0m
+[0m[1mmodule.web_stack.data.aws_ssm_parameter.db_password: Read complete after 0s [id=/acs730/assignment1/prod/db-password][0m
+[0m[1mmodule.web_stack.data.aws_ami.al2023: Read complete after 0s [id=ami-062caee4b7b602eb0][0m
+[0m[1mmodule.web_stack.aws_subnet.public["a"]: Refreshing state... [id=subnet-0f29a09bd669130ce][0m
+[0m[1mmodule.web_stack.aws_internet_gateway.main: Refreshing state... [id=igw-0d8371da9b7829601][0m
+[0m[1mmodule.web_stack.aws_subnet.public["b"]: Refreshing state... [id=subnet-037d1a9b7c025458d][0m
+[0m[1mmodule.web_stack.aws_security_group.web: Refreshing state... [id=sg-0a58726426d2db591][0m
+[0m[1mmodule.web_stack.aws_route_table.public: Refreshing state... [id=rtb-073f419b704ae604c][0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["a"]: Refreshing state... [id=rtbassoc-047e017ee8be6deca][0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["b"]: Refreshing state... [id=rtbassoc-0c79f1308a8509019][0m
+[0m[1mmodule.web_stack.aws_instance.web: Refreshing state... [id=i-043894f33c0197ffc][0m
+[0m[1mmodule.web_stack.aws_cloudwatch_metric_alarm.high_cpu: Refreshing state... [id=acs730-a1-prod-mkaur910-high-cpu][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.web_stack.aws_cloudwatch_metric_alarm.high_cpu[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_cloudwatch_metric_alarm" "high_cpu" {
+      [31m-[0m[0m actions_enabled                       = true [90m-> null[0m[0m
+      [31m-[0m[0m alarm_actions                         = [] [90m-> null[0m[0m
+      [31m-[0m[0m alarm_description                     = "Triggers when acs730-a1-prod-mkaur910 EC2 CPU utilization exceeds 80% for 2 minutes." [90m-> null[0m[0m
+      [31m-[0m[0m alarm_name                            = "acs730-a1-prod-mkaur910-high-cpu" [90m-> null[0m[0m
+      [31m-[0m[0m arn                                   = "arn:aws:cloudwatch:us-east-1:496177904282:alarm:acs730-a1-prod-mkaur910-high-cpu" [90m-> null[0m[0m
+      [31m-[0m[0m comparison_operator                   = "GreaterThanThreshold" [90m-> null[0m[0m
+      [31m-[0m[0m datapoints_to_alarm                   = 0 [90m-> null[0m[0m
+      [31m-[0m[0m dimensions                            = {
+          [31m-[0m[0m "InstanceId" = "i-043894f33c0197ffc"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m evaluation_periods                    = 2 [90m-> null[0m[0m
+      [31m-[0m[0m id                                    = "acs730-a1-prod-mkaur910-high-cpu" [90m-> null[0m[0m
+      [31m-[0m[0m insufficient_data_actions             = [] [90m-> null[0m[0m
+      [31m-[0m[0m metric_name                           = "CPUUtilization" [90m-> null[0m[0m
+      [31m-[0m[0m namespace                             = "AWS/EC2" [90m-> null[0m[0m
+      [31m-[0m[0m ok_actions                            = [] [90m-> null[0m[0m
+      [31m-[0m[0m period                                = 60 [90m-> null[0m[0m
+      [31m-[0m[0m statistic                             = "Average" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                  = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-high-cpu"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                              = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-high-cpu"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m threshold                             = 80 [90m-> null[0m[0m
+      [31m-[0m[0m treat_missing_data                    = "notBreaching" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_instance.web[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_instance" "web" {
+      [31m-[0m[0m ami                                  = "ami-062caee4b7b602eb0" [90m-> null[0m[0m
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:496177904282:instance/i-043894f33c0197ffc" [90m-> null[0m[0m
+      [31m-[0m[0m associate_public_ip_address          = true [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                    = "us-east-1a" [90m-> null[0m[0m
+      [31m-[0m[0m cpu_core_count                       = 1 [90m-> null[0m[0m
+      [31m-[0m[0m cpu_threads_per_core                 = 2 [90m-> null[0m[0m
+      [31m-[0m[0m disable_api_stop                     = false [90m-> null[0m[0m
+      [31m-[0m[0m disable_api_termination              = false [90m-> null[0m[0m
+      [31m-[0m[0m ebs_optimized                        = false [90m-> null[0m[0m
+      [31m-[0m[0m get_password_data                    = false [90m-> null[0m[0m
+      [31m-[0m[0m hibernation                          = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "i-043894f33c0197ffc" [90m-> null[0m[0m
+      [31m-[0m[0m instance_initiated_shutdown_behavior = "stop" [90m-> null[0m[0m
+      [31m-[0m[0m instance_state                       = "running" [90m-> null[0m[0m
+      [31m-[0m[0m instance_type                        = "t3.micro" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_address_count                   = 0 [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_addresses                       = [] [90m-> null[0m[0m
+      [31m-[0m[0m monitoring                           = false [90m-> null[0m[0m
+      [31m-[0m[0m placement_partition_number           = 0 [90m-> null[0m[0m
+      [31m-[0m[0m primary_network_interface_id         = "eni-09f5e77f72b177cef" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns                          = "ip-10-30-1-20.ec2.internal" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip                           = "10.30.1.20" [90m-> null[0m[0m
+      [31m-[0m[0m public_dns                           = "ec2-18-234-194-209.compute-1.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip                            = "18.234.194.209" [90m-> null[0m[0m
+      [31m-[0m[0m secondary_private_ips                = [] [90m-> null[0m[0m
+      [31m-[0m[0m security_groups                      = [] [90m-> null[0m[0m
+      [31m-[0m[0m source_dest_check                    = true [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id                            = "subnet-0f29a09bd669130ce" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-web"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-web"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tenancy                              = "default" [90m-> null[0m[0m
+      [31m-[0m[0m user_data                            = "603f874226b274cd510cebf55246e090d71e3ee7" [90m-> null[0m[0m
+      [31m-[0m[0m user_data_replace_on_change          = false [90m-> null[0m[0m
+      [31m-[0m[0m vpc_security_group_ids               = [
+          [31m-[0m[0m "sg-0a58726426d2db591",
+        ] [90m-> null[0m[0m
+        [90m# (8 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m capacity_reservation_specification {
+          [31m-[0m[0m capacity_reservation_preference = "open" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m cpu_options {
+          [31m-[0m[0m core_count       = 1 [90m-> null[0m[0m
+          [31m-[0m[0m threads_per_core = 2 [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m credit_specification {
+          [31m-[0m[0m cpu_credits = "unlimited" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m enclave_options {
+          [31m-[0m[0m enabled = false [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m maintenance_options {
+          [31m-[0m[0m auto_recovery = "default" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m metadata_options {
+          [31m-[0m[0m http_endpoint               = "enabled" [90m-> null[0m[0m
+          [31m-[0m[0m http_protocol_ipv6          = "disabled" [90m-> null[0m[0m
+          [31m-[0m[0m http_put_response_hop_limit = 2 [90m-> null[0m[0m
+          [31m-[0m[0m http_tokens                 = "required" [90m-> null[0m[0m
+          [31m-[0m[0m instance_metadata_tags      = "disabled" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m private_dns_name_options {
+          [31m-[0m[0m enable_resource_name_dns_a_record    = false [90m-> null[0m[0m
+          [31m-[0m[0m enable_resource_name_dns_aaaa_record = false [90m-> null[0m[0m
+          [31m-[0m[0m hostname_type                        = "ip-name" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m root_block_device {
+          [31m-[0m[0m delete_on_termination = true [90m-> null[0m[0m
+          [31m-[0m[0m device_name           = "/dev/xvda" [90m-> null[0m[0m
+          [31m-[0m[0m encrypted             = false [90m-> null[0m[0m
+          [31m-[0m[0m iops                  = 3000 [90m-> null[0m[0m
+          [31m-[0m[0m tags                  = {} [90m-> null[0m[0m
+          [31m-[0m[0m tags_all              = {} [90m-> null[0m[0m
+          [31m-[0m[0m throughput            = 125 [90m-> null[0m[0m
+          [31m-[0m[0m volume_id             = "vol-0c29790dfe62963be" [90m-> null[0m[0m
+          [31m-[0m[0m volume_size           = 8 [90m-> null[0m[0m
+          [31m-[0m[0m volume_type           = "gp3" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+    }
+
+[1m  # module.web_stack.aws_internet_gateway.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_internet_gateway" "main" {
+      [31m-[0m[0m arn      = "arn:aws:ec2:us-east-1:496177904282:internet-gateway/igw-0d8371da9b7829601" [90m-> null[0m[0m
+      [31m-[0m[0m id       = "igw-0d8371da9b7829601" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m tags     = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-igw"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-igw"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id   = "vpc-0acef1a7570ca48ec" [90m-> null[0m[0m
+    }
+
+[1m  # module.web_stack.aws_route_table.public[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table" "public" {
+      [31m-[0m[0m arn              = "arn:aws:ec2:us-east-1:496177904282:route-table/rtb-073f419b704ae604c" [90m-> null[0m[0m
+      [31m-[0m[0m id               = "rtb-073f419b704ae604c" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id         = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m propagating_vgws = [] [90m-> null[0m[0m
+      [31m-[0m[0m route            = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_block                 = "0.0.0.0/0"
+              [31m-[0m[0m gateway_id                 = "igw-0d8371da9b7829601"
+                [90m# (11 unchanged attributes hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m tags             = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-public-rt"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all         = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-public-rt"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id           = "vpc-0acef1a7570ca48ec" [90m-> null[0m[0m
+    }
+
+[1m  # module.web_stack.aws_route_table_association.public["a"][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
+      [31m-[0m[0m id             = "rtbassoc-047e017ee8be6deca" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-073f419b704ae604c" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-0f29a09bd669130ce" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_route_table_association.public["b"][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
+      [31m-[0m[0m id             = "rtbassoc-0c79f1308a8509019" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-073f419b704ae604c" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-037d1a9b7c025458d" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_security_group.web[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_security_group" "web" {
+      [31m-[0m[0m arn                    = "arn:aws:ec2:us-east-1:496177904282:security-group/sg-0a58726426d2db591" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "Web tier ingress for prod" [90m-> null[0m[0m
+      [31m-[0m[0m egress                 = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m description      = "All outbound"
+              [31m-[0m[0m from_port        = 0
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "-1"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 0
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-0a58726426d2db591" [90m-> null[0m[0m
+      [31m-[0m[0m ingress                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m description      = "HTTP inbound"
+              [31m-[0m[0m from_port        = 80
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 80
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "acs730-a1-prod-mkaur910-web-sg" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id               = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m revoke_rules_on_delete = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                   = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-web-sg"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all               = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-web-sg"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-0acef1a7570ca48ec" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_subnet.public["a"][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "public" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:496177904282:subnet/subnet-0f29a09bd669130ce" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1a" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az4" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.30.1.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-0f29a09bd669130ce" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-public-a"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-public-a"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-0acef1a7570ca48ec" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_subnet.public["b"][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "public" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:496177904282:subnet/subnet-037d1a9b7c025458d" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1b" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az6" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.30.2.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-037d1a9b7c025458d" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-public-b"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-public-b"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-0acef1a7570ca48ec" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_vpc.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_vpc" "main" {
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:496177904282:vpc/vpc-0acef1a7570ca48ec" [90m-> null[0m[0m
+      [31m-[0m[0m assign_generated_ipv6_cidr_block     = false [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                           = "10.30.0.0/16" [90m-> null[0m[0m
+      [31m-[0m[0m default_network_acl_id               = "acl-0febe5f7fd6fa7029" [90m-> null[0m[0m
+      [31m-[0m[0m default_route_table_id               = "rtb-0d5bdc11059b2773d" [90m-> null[0m[0m
+      [31m-[0m[0m default_security_group_id            = "sg-0f0eadaead1699d59" [90m-> null[0m[0m
+      [31m-[0m[0m dhcp_options_id                      = "dopt-0be2f3d38da334666" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_hostnames                 = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_support                   = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_network_address_usage_metrics = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "vpc-0acef1a7570ca48ec" [90m-> null[0m[0m
+      [31m-[0m[0m instance_tenancy                     = "default" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_netmask_length                  = 0 [90m-> null[0m[0m
+      [31m-[0m[0m main_route_table_id                  = "rtb-0d5bdc11059b2773d" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                             = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-vpc"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {
+          [31m-[0m[0m "Environment" = "prod"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-prod-mkaur910-vpc"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1mPlan:[0m 0 to add, 0 to change, 10 to destroy.
+[0m
+Changes to Outputs:
+  [31m-[0m[0m cloudwatch_alarm_name = "acs730-a1-prod-mkaur910-high-cpu" [90m-> null[0m[0m
+  [31m-[0m[0m vpc_id                = "vpc-0acef1a7570ca48ec" [90m-> null[0m[0m
+  [31m-[0m[0m web_instance_id       = "i-043894f33c0197ffc" [90m-> null[0m[0m
+  [31m-[0m[0m web_url               = "http://18.234.194.209/" [90m-> null[0m[0m
+[0m[1mmodule.web_stack.aws_cloudwatch_metric_alarm.high_cpu: Destroying... [id=acs730-a1-prod-mkaur910-high-cpu][0m[0m
+[0m[1mmodule.web_stack.aws_cloudwatch_metric_alarm.high_cpu: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_instance.web: Destroying... [id=i-043894f33c0197ffc][0m[0m
+[0m[1mmodule.web_stack.aws_instance.web: Still destroying... [id=i-043894f33c0197ffc, 10s elapsed][0m[0m
+[0m[1mmodule.web_stack.aws_instance.web: Still destroying... [id=i-043894f33c0197ffc, 20s elapsed][0m[0m
+[0m[1mmodule.web_stack.aws_instance.web: Destruction complete after 30s[0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["b"]: Destroying... [id=rtbassoc-0c79f1308a8509019][0m[0m
+[0m[1mmodule.web_stack.aws_security_group.web: Destroying... [id=sg-0a58726426d2db591][0m[0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["a"]: Destroying... [id=rtbassoc-047e017ee8be6deca][0m[0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["b"]: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["a"]: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_subnet.public["a"]: Destroying... [id=subnet-0f29a09bd669130ce][0m[0m
+[0m[1mmodule.web_stack.aws_subnet.public["b"]: Destroying... [id=subnet-037d1a9b7c025458d][0m[0m
+[0m[1mmodule.web_stack.aws_route_table.public: Destroying... [id=rtb-073f419b704ae604c][0m[0m
+[0m[1mmodule.web_stack.aws_security_group.web: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_route_table.public: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_internet_gateway.main: Destroying... [id=igw-0d8371da9b7829601][0m[0m
+[0m[1mmodule.web_stack.aws_subnet.public["b"]: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_subnet.public["a"]: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_internet_gateway.main: Destruction complete after 1s[0m
+[0m[1mmodule.web_stack.aws_vpc.main: Destroying... [id=vpc-0acef1a7570ca48ec][0m[0m
+[0m[1mmodule.web_stack.aws_vpc.main: Destruction complete after 0s[0m
+[0m[1m[32m
+Destroy complete! Resources: 10 destroyed.
+[0m
+=== DESTROY STAGING ===
+[0m[1mmodule.web_stack.data.aws_ami.al2023: Reading...[0m[0m
+[0m[1mmodule.web_stack.data.aws_region.current: Reading...[0m[0m
+[0m[1mmodule.web_stack.data.aws_availability_zones.available: Reading...[0m[0m
+[0m[1mmodule.web_stack.data.aws_ssm_parameter.db_password: Reading...[0m[0m
+[0m[1mmodule.web_stack.aws_vpc.main: Refreshing state... [id=vpc-06c11eb7b4c9bfe5e][0m
+[0m[1mmodule.web_stack.data.aws_region.current: Read complete after 0s [id=us-east-1][0m
+[0m[1mmodule.web_stack.data.aws_availability_zones.available: Read complete after 0s [id=us-east-1][0m
+[0m[1mmodule.web_stack.data.aws_ssm_parameter.db_password: Read complete after 0s [id=/acs730/assignment1/prod/db-password][0m
+[0m[1mmodule.web_stack.data.aws_ami.al2023: Read complete after 1s [id=ami-062caee4b7b602eb0][0m
+[0m[1mmodule.web_stack.aws_subnet.public["a"]: Refreshing state... [id=subnet-036b9713ca70a39f0][0m
+[0m[1mmodule.web_stack.aws_subnet.public["b"]: Refreshing state... [id=subnet-0bc79d6d468d32614][0m
+[0m[1mmodule.web_stack.aws_internet_gateway.main: Refreshing state... [id=igw-0a54b133ff809bcf8][0m
+[0m[1mmodule.web_stack.aws_security_group.web: Refreshing state... [id=sg-0b5efc96386fe4c58][0m
+[0m[1mmodule.web_stack.aws_route_table.public: Refreshing state... [id=rtb-031e9669c7e68e541][0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["a"]: Refreshing state... [id=rtbassoc-069ab04f5157a0693][0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["b"]: Refreshing state... [id=rtbassoc-06aed79d5860258b0][0m
+[0m[1mmodule.web_stack.aws_instance.web: Refreshing state... [id=i-0a2c67331ea2d07a0][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.web_stack.aws_instance.web[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_instance" "web" {
+      [31m-[0m[0m ami                                  = "ami-062caee4b7b602eb0" [90m-> null[0m[0m
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:496177904282:instance/i-0a2c67331ea2d07a0" [90m-> null[0m[0m
+      [31m-[0m[0m associate_public_ip_address          = true [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                    = "us-east-1a" [90m-> null[0m[0m
+      [31m-[0m[0m cpu_core_count                       = 1 [90m-> null[0m[0m
+      [31m-[0m[0m cpu_threads_per_core                 = 2 [90m-> null[0m[0m
+      [31m-[0m[0m disable_api_stop                     = false [90m-> null[0m[0m
+      [31m-[0m[0m disable_api_termination              = false [90m-> null[0m[0m
+      [31m-[0m[0m ebs_optimized                        = false [90m-> null[0m[0m
+      [31m-[0m[0m get_password_data                    = false [90m-> null[0m[0m
+      [31m-[0m[0m hibernation                          = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "i-0a2c67331ea2d07a0" [90m-> null[0m[0m
+      [31m-[0m[0m instance_initiated_shutdown_behavior = "stop" [90m-> null[0m[0m
+      [31m-[0m[0m instance_state                       = "running" [90m-> null[0m[0m
+      [31m-[0m[0m instance_type                        = "t3.micro" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_address_count                   = 0 [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_addresses                       = [] [90m-> null[0m[0m
+      [31m-[0m[0m monitoring                           = false [90m-> null[0m[0m
+      [31m-[0m[0m placement_partition_number           = 0 [90m-> null[0m[0m
+      [31m-[0m[0m primary_network_interface_id         = "eni-00e0534d2e8b82da1" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns                          = "ip-10-20-1-75.ec2.internal" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip                           = "10.20.1.75" [90m-> null[0m[0m
+      [31m-[0m[0m public_dns                           = "ec2-13-220-106-45.compute-1.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip                            = "13.220.106.45" [90m-> null[0m[0m
+      [31m-[0m[0m secondary_private_ips                = [] [90m-> null[0m[0m
+      [31m-[0m[0m security_groups                      = [] [90m-> null[0m[0m
+      [31m-[0m[0m source_dest_check                    = true [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id                            = "subnet-036b9713ca70a39f0" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {
+          [31m-[0m[0m "Environment" = "staging"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-staging-mkaur910-web"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {
+          [31m-[0m[0m "Environment" = "staging"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-staging-mkaur910-web"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tenancy                              = "default" [90m-> null[0m[0m
+      [31m-[0m[0m user_data                            = "ba9be0d0b5abdc413ba7123ce5f50d3b3b0aaaf5" [90m-> null[0m[0m
+      [31m-[0m[0m user_data_replace_on_change          = false [90m-> null[0m[0m
+      [31m-[0m[0m vpc_security_group_ids               = [
+          [31m-[0m[0m "sg-0b5efc96386fe4c58",
+        ] [90m-> null[0m[0m
+        [90m# (8 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m capacity_reservation_specification {
+          [31m-[0m[0m capacity_reservation_preference = "open" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m cpu_options {
+          [31m-[0m[0m core_count       = 1 [90m-> null[0m[0m
+          [31m-[0m[0m threads_per_core = 2 [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m credit_specification {
+          [31m-[0m[0m cpu_credits = "unlimited" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m enclave_options {
+          [31m-[0m[0m enabled = false [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m maintenance_options {
+          [31m-[0m[0m auto_recovery = "default" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m metadata_options {
+          [31m-[0m[0m http_endpoint               = "enabled" [90m-> null[0m[0m
+          [31m-[0m[0m http_protocol_ipv6          = "disabled" [90m-> null[0m[0m
+          [31m-[0m[0m http_put_response_hop_limit = 2 [90m-> null[0m[0m
+          [31m-[0m[0m http_tokens                 = "required" [90m-> null[0m[0m
+          [31m-[0m[0m instance_metadata_tags      = "disabled" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m private_dns_name_options {
+          [31m-[0m[0m enable_resource_name_dns_a_record    = false [90m-> null[0m[0m
+          [31m-[0m[0m enable_resource_name_dns_aaaa_record = false [90m-> null[0m[0m
+          [31m-[0m[0m hostname_type                        = "ip-name" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m root_block_device {
+          [31m-[0m[0m delete_on_termination = true [90m-> null[0m[0m
+          [31m-[0m[0m device_name           = "/dev/xvda" [90m-> null[0m[0m
+          [31m-[0m[0m encrypted             = false [90m-> null[0m[0m
+          [31m-[0m[0m iops                  = 3000 [90m-> null[0m[0m
+          [31m-[0m[0m tags                  = {} [90m-> null[0m[0m
+          [31m-[0m[0m tags_all              = {} [90m-> null[0m[0m
+          [31m-[0m[0m throughput            = 125 [90m-> null[0m[0m
+          [31m-[0m[0m volume_id             = "vol-0ca6581f70bd2cfca" [90m-> null[0m[0m
+          [31m-[0m[0m volume_size           = 8 [90m-> null[0m[0m
+          [31m-[0m[0m volume_type           = "gp3" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+    }
+
+[1m  # module.web_stack.aws_internet_gateway.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_internet_gateway" "main" {
+      [31m-[0m[0m arn      = "arn:aws:ec2:us-east-1:496177904282:internet-gateway/igw-0a54b133ff809bcf8" [90m-> null[0m[0m
+      [31m-[0m[0m id       = "igw-0a54b133ff809bcf8" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m tags     = {
+          [31m-[0m[0m "Environment" = "staging"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-staging-mkaur910-igw"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all = {
+          [31m-[0m[0m "Environment" = "staging"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-staging-mkaur910-igw"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id   = "vpc-06c11eb7b4c9bfe5e" [90m-> null[0m[0m
+    }
+
+[1m  # module.web_stack.aws_route_table.public[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table" "public" {
+      [31m-[0m[0m arn              = "arn:aws:ec2:us-east-1:496177904282:route-table/rtb-031e9669c7e68e541" [90m-> null[0m[0m
+      [31m-[0m[0m id               = "rtb-031e9669c7e68e541" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id         = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m propagating_vgws = [] [90m-> null[0m[0m
+      [31m-[0m[0m route            = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_block                 = "0.0.0.0/0"
+              [31m-[0m[0m gateway_id                 = "igw-0a54b133ff809bcf8"
+                [90m# (11 unchanged attributes hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m tags             = {
+          [31m-[0m[0m "Environment" = "staging"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-staging-mkaur910-public-rt"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all         = {
+          [31m-[0m[0m "Environment" = "staging"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-staging-mkaur910-public-rt"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id           = "vpc-06c11eb7b4c9bfe5e" [90m-> null[0m[0m
+    }
+
+[1m  # module.web_stack.aws_route_table_association.public["a"][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
+      [31m-[0m[0m id             = "rtbassoc-069ab04f5157a0693" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-031e9669c7e68e541" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-036b9713ca70a39f0" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_route_table_association.public["b"][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
+      [31m-[0m[0m id             = "rtbassoc-06aed79d5860258b0" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-031e9669c7e68e541" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-0bc79d6d468d32614" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_security_group.web[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_security_group" "web" {
+      [31m-[0m[0m arn                    = "arn:aws:ec2:us-east-1:496177904282:security-group/sg-0b5efc96386fe4c58" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "Web tier ingress for staging" [90m-> null[0m[0m
+      [31m-[0m[0m egress                 = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m description      = "All outbound"
+              [31m-[0m[0m from_port        = 0
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "-1"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 0
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-0b5efc96386fe4c58" [90m-> null[0m[0m
+      [31m-[0m[0m ingress                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m description      = "HTTP inbound"
+              [31m-[0m[0m from_port        = 80
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 80
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "acs730-a1-staging-mkaur910-web-sg" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id               = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m revoke_rules_on_delete = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                   = {
+          [31m-[0m[0m "Environment" = "staging"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-staging-mkaur910-web-sg"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all               = {
+          [31m-[0m[0m "Environment" = "staging"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-staging-mkaur910-web-sg"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-06c11eb7b4c9bfe5e" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_subnet.public["a"][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "public" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:496177904282:subnet/subnet-036b9713ca70a39f0" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1a" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az4" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.20.1.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-036b9713ca70a39f0" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Environment" = "staging"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-staging-mkaur910-public-a"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Environment" = "staging"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-staging-mkaur910-public-a"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-06c11eb7b4c9bfe5e" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_subnet.public["b"][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "public" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:496177904282:subnet/subnet-0bc79d6d468d32614" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1b" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az6" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.20.2.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-0bc79d6d468d32614" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Environment" = "staging"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-staging-mkaur910-public-b"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Environment" = "staging"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-staging-mkaur910-public-b"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-06c11eb7b4c9bfe5e" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_vpc.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_vpc" "main" {
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:496177904282:vpc/vpc-06c11eb7b4c9bfe5e" [90m-> null[0m[0m
+      [31m-[0m[0m assign_generated_ipv6_cidr_block     = false [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                           = "10.20.0.0/16" [90m-> null[0m[0m
+      [31m-[0m[0m default_network_acl_id               = "acl-04904cc4029df3d92" [90m-> null[0m[0m
+      [31m-[0m[0m default_route_table_id               = "rtb-011a6c6742dd53ff0" [90m-> null[0m[0m
+      [31m-[0m[0m default_security_group_id            = "sg-05e65c9ccdb027008" [90m-> null[0m[0m
+      [31m-[0m[0m dhcp_options_id                      = "dopt-0be2f3d38da334666" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_hostnames                 = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_support                   = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_network_address_usage_metrics = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "vpc-06c11eb7b4c9bfe5e" [90m-> null[0m[0m
+      [31m-[0m[0m instance_tenancy                     = "default" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_netmask_length                  = 0 [90m-> null[0m[0m
+      [31m-[0m[0m main_route_table_id                  = "rtb-011a6c6742dd53ff0" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                             = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {
+          [31m-[0m[0m "Environment" = "staging"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-staging-mkaur910-vpc"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {
+          [31m-[0m[0m "Environment" = "staging"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-staging-mkaur910-vpc"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1mPlan:[0m 0 to add, 0 to change, 9 to destroy.
+[0m
+Changes to Outputs:
+  [31m-[0m[0m vpc_id          = "vpc-06c11eb7b4c9bfe5e" [90m-> null[0m[0m
+  [31m-[0m[0m web_instance_id = "i-0a2c67331ea2d07a0" [90m-> null[0m[0m
+  [31m-[0m[0m web_url         = "http://13.220.106.45/" [90m-> null[0m[0m
+[0m[1mmodule.web_stack.aws_instance.web: Destroying... [id=i-0a2c67331ea2d07a0][0m[0m
+[0m[1mmodule.web_stack.aws_instance.web: Still destroying... [id=i-0a2c67331ea2d07a0, 10s elapsed][0m[0m
+[0m[1mmodule.web_stack.aws_instance.web: Still destroying... [id=i-0a2c67331ea2d07a0, 20s elapsed][0m[0m
+[0m[1mmodule.web_stack.aws_instance.web: Destruction complete after 30s[0m
+[0m[1mmodule.web_stack.aws_security_group.web: Destroying... [id=sg-0b5efc96386fe4c58][0m[0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["b"]: Destroying... [id=rtbassoc-06aed79d5860258b0][0m[0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["a"]: Destroying... [id=rtbassoc-069ab04f5157a0693][0m[0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["b"]: Destruction complete after 1s[0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["a"]: Destruction complete after 1s[0m
+[0m[1mmodule.web_stack.aws_subnet.public["b"]: Destroying... [id=subnet-0bc79d6d468d32614][0m[0m
+[0m[1mmodule.web_stack.aws_subnet.public["a"]: Destroying... [id=subnet-036b9713ca70a39f0][0m[0m
+[0m[1mmodule.web_stack.aws_route_table.public: Destroying... [id=rtb-031e9669c7e68e541][0m[0m
+[0m[1mmodule.web_stack.aws_security_group.web: Destruction complete after 1s[0m
+[0m[1mmodule.web_stack.aws_route_table.public: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_internet_gateway.main: Destroying... [id=igw-0a54b133ff809bcf8][0m[0m
+[0m[1mmodule.web_stack.aws_subnet.public["b"]: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_subnet.public["a"]: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_internet_gateway.main: Destruction complete after 1s[0m
+[0m[1mmodule.web_stack.aws_vpc.main: Destroying... [id=vpc-06c11eb7b4c9bfe5e][0m[0m
+[0m[1mmodule.web_stack.aws_vpc.main: Destruction complete after 0s[0m
+[0m[1m[32m
+Destroy complete! Resources: 9 destroyed.
+[0m
+=== DESTROY DEV ===
+[0m[1mmodule.web_stack.data.aws_region.current: Reading...[0m[0m
+[0m[1mmodule.web_stack.data.aws_availability_zones.available: Reading...[0m[0m
+[0m[1mmodule.web_stack.data.aws_ami.al2023: Reading...[0m[0m
+[0m[1mmodule.web_stack.data.aws_ssm_parameter.db_password: Reading...[0m[0m
+[0m[1mmodule.web_stack.aws_vpc.main: Refreshing state... [id=vpc-06dbff8d09e6438d5][0m
+[0m[1mmodule.web_stack.data.aws_region.current: Read complete after 0s [id=us-east-1][0m
+[0m[1mmodule.web_stack.data.aws_availability_zones.available: Read complete after 0s [id=us-east-1][0m
+[0m[1mmodule.web_stack.data.aws_ssm_parameter.db_password: Read complete after 0s [id=/acs730/assignment1/prod/db-password][0m
+[0m[1mmodule.web_stack.data.aws_ami.al2023: Read complete after 0s [id=ami-062caee4b7b602eb0][0m
+[0m[1mmodule.web_stack.aws_subnet.public["a"]: Refreshing state... [id=subnet-02d12b623d859d8c1][0m
+[0m[1mmodule.web_stack.aws_security_group.web: Refreshing state... [id=sg-0a8e6289bf9477354][0m
+[0m[1mmodule.web_stack.aws_internet_gateway.main: Refreshing state... [id=igw-0d15066113d3e47db][0m
+[0m[1mmodule.web_stack.aws_subnet.public["b"]: Refreshing state... [id=subnet-02d68774ed89f6db1][0m
+[0m[1mmodule.web_stack.aws_route_table.public: Refreshing state... [id=rtb-0722491e7ee72265f][0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["a"]: Refreshing state... [id=rtbassoc-04b37519539752c81][0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["b"]: Refreshing state... [id=rtbassoc-0c8cba358718db054][0m
+[0m[1mmodule.web_stack.aws_instance.web: Refreshing state... [id=i-0264ef2fc8662576d][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.web_stack.aws_instance.web[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_instance" "web" {
+      [31m-[0m[0m ami                                  = "ami-062caee4b7b602eb0" [90m-> null[0m[0m
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:496177904282:instance/i-0264ef2fc8662576d" [90m-> null[0m[0m
+      [31m-[0m[0m associate_public_ip_address          = true [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                    = "us-east-1a" [90m-> null[0m[0m
+      [31m-[0m[0m cpu_core_count                       = 1 [90m-> null[0m[0m
+      [31m-[0m[0m cpu_threads_per_core                 = 2 [90m-> null[0m[0m
+      [31m-[0m[0m disable_api_stop                     = false [90m-> null[0m[0m
+      [31m-[0m[0m disable_api_termination              = false [90m-> null[0m[0m
+      [31m-[0m[0m ebs_optimized                        = false [90m-> null[0m[0m
+      [31m-[0m[0m get_password_data                    = false [90m-> null[0m[0m
+      [31m-[0m[0m hibernation                          = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "i-0264ef2fc8662576d" [90m-> null[0m[0m
+      [31m-[0m[0m instance_initiated_shutdown_behavior = "stop" [90m-> null[0m[0m
+      [31m-[0m[0m instance_state                       = "running" [90m-> null[0m[0m
+      [31m-[0m[0m instance_type                        = "t3.micro" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_address_count                   = 0 [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_addresses                       = [] [90m-> null[0m[0m
+      [31m-[0m[0m monitoring                           = false [90m-> null[0m[0m
+      [31m-[0m[0m placement_partition_number           = 0 [90m-> null[0m[0m
+      [31m-[0m[0m primary_network_interface_id         = "eni-0cba500aa37f42021" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns                          = "ip-10-10-1-10.ec2.internal" [90m-> null[0m[0m
+      [31m-[0m[0m private_ip                           = "10.10.1.10" [90m-> null[0m[0m
+      [31m-[0m[0m public_dns                           = "ec2-3-91-70-12.compute-1.amazonaws.com" [90m-> null[0m[0m
+      [31m-[0m[0m public_ip                            = "3.91.70.12" [90m-> null[0m[0m
+      [31m-[0m[0m secondary_private_ips                = [] [90m-> null[0m[0m
+      [31m-[0m[0m security_groups                      = [] [90m-> null[0m[0m
+      [31m-[0m[0m source_dest_check                    = true [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id                            = "subnet-02d12b623d859d8c1" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-dev-mkaur910-web"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-dev-mkaur910-web"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tenancy                              = "default" [90m-> null[0m[0m
+      [31m-[0m[0m user_data                            = "77dd81d0549aab4b4ac880b6c24132edf42f1ec9" [90m-> null[0m[0m
+      [31m-[0m[0m user_data_replace_on_change          = false [90m-> null[0m[0m
+      [31m-[0m[0m vpc_security_group_ids               = [
+          [31m-[0m[0m "sg-0a8e6289bf9477354",
+        ] [90m-> null[0m[0m
+        [90m# (8 unchanged attributes hidden)[0m[0m
+
+      [31m-[0m[0m capacity_reservation_specification {
+          [31m-[0m[0m capacity_reservation_preference = "open" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m cpu_options {
+          [31m-[0m[0m core_count       = 1 [90m-> null[0m[0m
+          [31m-[0m[0m threads_per_core = 2 [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+
+      [31m-[0m[0m credit_specification {
+          [31m-[0m[0m cpu_credits = "unlimited" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m enclave_options {
+          [31m-[0m[0m enabled = false [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m maintenance_options {
+          [31m-[0m[0m auto_recovery = "default" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m metadata_options {
+          [31m-[0m[0m http_endpoint               = "enabled" [90m-> null[0m[0m
+          [31m-[0m[0m http_protocol_ipv6          = "disabled" [90m-> null[0m[0m
+          [31m-[0m[0m http_put_response_hop_limit = 2 [90m-> null[0m[0m
+          [31m-[0m[0m http_tokens                 = "required" [90m-> null[0m[0m
+          [31m-[0m[0m instance_metadata_tags      = "disabled" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m private_dns_name_options {
+          [31m-[0m[0m enable_resource_name_dns_a_record    = false [90m-> null[0m[0m
+          [31m-[0m[0m enable_resource_name_dns_aaaa_record = false [90m-> null[0m[0m
+          [31m-[0m[0m hostname_type                        = "ip-name" [90m-> null[0m[0m
+        }
+
+      [31m-[0m[0m root_block_device {
+          [31m-[0m[0m delete_on_termination = true [90m-> null[0m[0m
+          [31m-[0m[0m device_name           = "/dev/xvda" [90m-> null[0m[0m
+          [31m-[0m[0m encrypted             = false [90m-> null[0m[0m
+          [31m-[0m[0m iops                  = 3000 [90m-> null[0m[0m
+          [31m-[0m[0m tags                  = {} [90m-> null[0m[0m
+          [31m-[0m[0m tags_all              = {} [90m-> null[0m[0m
+          [31m-[0m[0m throughput            = 125 [90m-> null[0m[0m
+          [31m-[0m[0m volume_id             = "vol-03e5d8545527cd8ae" [90m-> null[0m[0m
+          [31m-[0m[0m volume_size           = 8 [90m-> null[0m[0m
+          [31m-[0m[0m volume_type           = "gp3" [90m-> null[0m[0m
+            [90m# (1 unchanged attribute hidden)[0m[0m
+        }
+    }
+
+[1m  # module.web_stack.aws_internet_gateway.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_internet_gateway" "main" {
+      [31m-[0m[0m arn      = "arn:aws:ec2:us-east-1:496177904282:internet-gateway/igw-0d15066113d3e47db" [90m-> null[0m[0m
+      [31m-[0m[0m id       = "igw-0d15066113d3e47db" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m tags     = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-dev-mkaur910-igw"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-dev-mkaur910-igw"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id   = "vpc-06dbff8d09e6438d5" [90m-> null[0m[0m
+    }
+
+[1m  # module.web_stack.aws_route_table.public[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table" "public" {
+      [31m-[0m[0m arn              = "arn:aws:ec2:us-east-1:496177904282:route-table/rtb-0722491e7ee72265f" [90m-> null[0m[0m
+      [31m-[0m[0m id               = "rtb-0722491e7ee72265f" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id         = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m propagating_vgws = [] [90m-> null[0m[0m
+      [31m-[0m[0m route            = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_block                 = "0.0.0.0/0"
+              [31m-[0m[0m gateway_id                 = "igw-0d15066113d3e47db"
+                [90m# (11 unchanged attributes hidden)[0m[0m
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m tags             = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-dev-mkaur910-public-rt"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all         = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-dev-mkaur910-public-rt"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id           = "vpc-06dbff8d09e6438d5" [90m-> null[0m[0m
+    }
+
+[1m  # module.web_stack.aws_route_table_association.public["a"][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
+      [31m-[0m[0m id             = "rtbassoc-04b37519539752c81" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-0722491e7ee72265f" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-02d12b623d859d8c1" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_route_table_association.public["b"][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_route_table_association" "public" {
+      [31m-[0m[0m id             = "rtbassoc-0c8cba358718db054" [90m-> null[0m[0m
+      [31m-[0m[0m route_table_id = "rtb-0722491e7ee72265f" [90m-> null[0m[0m
+      [31m-[0m[0m subnet_id      = "subnet-02d68774ed89f6db1" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_security_group.web[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_security_group" "web" {
+      [31m-[0m[0m arn                    = "arn:aws:ec2:us-east-1:496177904282:security-group/sg-0a8e6289bf9477354" [90m-> null[0m[0m
+      [31m-[0m[0m description            = "Web tier ingress for dev" [90m-> null[0m[0m
+      [31m-[0m[0m egress                 = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m description      = "All outbound"
+              [31m-[0m[0m from_port        = 0
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "-1"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 0
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m id                     = "sg-0a8e6289bf9477354" [90m-> null[0m[0m
+      [31m-[0m[0m ingress                = [
+          [31m-[0m[0m {
+              [31m-[0m[0m cidr_blocks      = [
+                  [31m-[0m[0m "0.0.0.0/0",
+                ]
+              [31m-[0m[0m description      = "HTTP inbound"
+              [31m-[0m[0m from_port        = 80
+              [31m-[0m[0m ipv6_cidr_blocks = []
+              [31m-[0m[0m prefix_list_ids  = []
+              [31m-[0m[0m protocol         = "tcp"
+              [31m-[0m[0m security_groups  = []
+              [31m-[0m[0m self             = false
+              [31m-[0m[0m to_port          = 80
+            },
+        ] [90m-> null[0m[0m
+      [31m-[0m[0m name                   = "acs730-a1-dev-mkaur910-web-sg" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id               = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m revoke_rules_on_delete = false [90m-> null[0m[0m
+      [31m-[0m[0m tags                   = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-dev-mkaur910-web-sg"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all               = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-dev-mkaur910-web-sg"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                 = "vpc-06dbff8d09e6438d5" [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_subnet.public["a"][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "public" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:496177904282:subnet/subnet-02d12b623d859d8c1" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1a" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az4" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.10.1.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-02d12b623d859d8c1" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-dev-mkaur910-public-a"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-dev-mkaur910-public-a"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-06dbff8d09e6438d5" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_subnet.public["b"][0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_subnet" "public" {
+      [31m-[0m[0m arn                                            = "arn:aws:ec2:us-east-1:496177904282:subnet/subnet-02d68774ed89f6db1" [90m-> null[0m[0m
+      [31m-[0m[0m assign_ipv6_address_on_creation                = false [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone                              = "us-east-1b" [90m-> null[0m[0m
+      [31m-[0m[0m availability_zone_id                           = "use1-az6" [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                                     = "10.10.2.0/24" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns64                                   = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_lni_at_device_index                     = 0 [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_a_record_on_launch    = false [90m-> null[0m[0m
+      [31m-[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                             = "subnet-02d68774ed89f6db1" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_native                                    = false [90m-> null[0m[0m
+      [31m-[0m[0m map_customer_owned_ip_on_launch                = false [90m-> null[0m[0m
+      [31m-[0m[0m map_public_ip_on_launch                        = true [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                                       = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m private_dns_hostname_type_on_launch            = "ip-name" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                           = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-dev-mkaur910-public-b"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                                       = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-dev-mkaur910-public-b"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m vpc_id                                         = "vpc-06dbff8d09e6438d5" [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # module.web_stack.aws_vpc.main[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "aws_vpc" "main" {
+      [31m-[0m[0m arn                                  = "arn:aws:ec2:us-east-1:496177904282:vpc/vpc-06dbff8d09e6438d5" [90m-> null[0m[0m
+      [31m-[0m[0m assign_generated_ipv6_cidr_block     = false [90m-> null[0m[0m
+      [31m-[0m[0m cidr_block                           = "10.10.0.0/16" [90m-> null[0m[0m
+      [31m-[0m[0m default_network_acl_id               = "acl-00e2ca25f91f6d3cb" [90m-> null[0m[0m
+      [31m-[0m[0m default_route_table_id               = "rtb-011043ab70dc7bf90" [90m-> null[0m[0m
+      [31m-[0m[0m default_security_group_id            = "sg-03d3eb0b0df5c093f" [90m-> null[0m[0m
+      [31m-[0m[0m dhcp_options_id                      = "dopt-0be2f3d38da334666" [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_hostnames                 = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_dns_support                   = true [90m-> null[0m[0m
+      [31m-[0m[0m enable_network_address_usage_metrics = false [90m-> null[0m[0m
+      [31m-[0m[0m id                                   = "vpc-06dbff8d09e6438d5" [90m-> null[0m[0m
+      [31m-[0m[0m instance_tenancy                     = "default" [90m-> null[0m[0m
+      [31m-[0m[0m ipv6_netmask_length                  = 0 [90m-> null[0m[0m
+      [31m-[0m[0m main_route_table_id                  = "rtb-011043ab70dc7bf90" [90m-> null[0m[0m
+      [31m-[0m[0m owner_id                             = "496177904282" [90m-> null[0m[0m
+      [31m-[0m[0m tags                                 = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-dev-mkaur910-vpc"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+      [31m-[0m[0m tags_all                             = {
+          [31m-[0m[0m "Environment" = "dev"
+          [31m-[0m[0m "ManagedBy"   = "terraform"
+          [31m-[0m[0m "Name"        = "acs730-a1-dev-mkaur910-vpc"
+          [31m-[0m[0m "Owner"       = "mkaur910"
+          [31m-[0m[0m "Project"     = "acs730-a1"
+        } [90m-> null[0m[0m
+        [90m# (4 unchanged attributes hidden)[0m[0m
+    }
+
+[1mPlan:[0m 0 to add, 0 to change, 9 to destroy.
+[0m
+Changes to Outputs:
+  [31m-[0m[0m vpc_id          = "vpc-06dbff8d09e6438d5" [90m-> null[0m[0m
+  [31m-[0m[0m web_instance_id = "i-0264ef2fc8662576d" [90m-> null[0m[0m
+  [31m-[0m[0m web_url         = "http://3.91.70.12/" [90m-> null[0m[0m
+[0m[1mmodule.web_stack.aws_instance.web: Destroying... [id=i-0264ef2fc8662576d][0m[0m
+[0m[1mmodule.web_stack.aws_instance.web: Still destroying... [id=i-0264ef2fc8662576d, 10s elapsed][0m[0m
+[0m[1mmodule.web_stack.aws_instance.web: Still destroying... [id=i-0264ef2fc8662576d, 20s elapsed][0m[0m
+[0m[1mmodule.web_stack.aws_instance.web: Destruction complete after 30s[0m
+[0m[1mmodule.web_stack.aws_security_group.web: Destroying... [id=sg-0a8e6289bf9477354][0m[0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["b"]: Destroying... [id=rtbassoc-0c8cba358718db054][0m[0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["a"]: Destroying... [id=rtbassoc-04b37519539752c81][0m[0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["b"]: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_route_table_association.public["a"]: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_subnet.public["b"]: Destroying... [id=subnet-02d68774ed89f6db1][0m[0m
+[0m[1mmodule.web_stack.aws_route_table.public: Destroying... [id=rtb-0722491e7ee72265f][0m[0m
+[0m[1mmodule.web_stack.aws_subnet.public["a"]: Destroying... [id=subnet-02d12b623d859d8c1][0m[0m
+[0m[1mmodule.web_stack.aws_security_group.web: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_route_table.public: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_internet_gateway.main: Destroying... [id=igw-0d15066113d3e47db][0m[0m
+[0m[1mmodule.web_stack.aws_subnet.public["a"]: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_subnet.public["b"]: Destruction complete after 0s[0m
+[0m[1mmodule.web_stack.aws_internet_gateway.main: Destruction complete after 1s[0m
+[0m[1mmodule.web_stack.aws_vpc.main: Destroying... [id=vpc-06dbff8d09e6438d5][0m[0m
+[0m[1mmodule.web_stack.aws_vpc.main: Destruction complete after 0s[0m
+[0m[1m[32m
+Destroy complete! Resources: 9 destroyed.
+[0m

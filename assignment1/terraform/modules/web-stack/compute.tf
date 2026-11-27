@@ -38,3 +38,29 @@ resource "aws_s3_bucket" "artifacts" {
 
   tags = merge(local.common_tags, { Name = "${local.name_prefix}-artifacts" })
 }
+
+data "aws_ssm_parameter" "db_password" {
+  name            = "/acs730/assignment1/prod/db-password"
+  with_decryption = true
+}
+
+resource "aws_cloudwatch_metric_alarm" "high_cpu" {
+  alarm_name          = "${local.name_prefix}-high-cpu"
+  comparison_operator = "GreaterThanThreshold"
+  evaluation_periods  = 2
+  metric_name         = "CPUUtilization"
+  namespace           = "AWS/EC2"
+  period              = 60
+  statistic           = "Average"
+  threshold           = 80
+  alarm_description   = "Triggers when ${local.name_prefix} EC2 CPU utilization exceeds 80% for 2 minutes."
+  treat_missing_data  = "notBreaching"
+
+  dimensions = {
+    InstanceId = aws_instance.web.id
+  }
+
+  tags = merge(local.common_tags, {
+    Name = "${local.name_prefix}-high-cpu"
+  })
+}

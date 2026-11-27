@@ -1,0 +1,239 @@
+Deploy to prod	Set up job	﻿2026-11-27T09:34:21.4753430Z Current runner version: '2.338.2'
+Deploy to prod	Set up job	2026-11-27T09:34:21.4782548Z ##[group]Runner Image Provisioner
+Deploy to prod	Set up job	2026-11-27T09:34:21.4783586Z Hosted Compute Agent
+Deploy to prod	Set up job	2026-11-27T09:34:21.4784353Z Version: 20261111.635
+Deploy to prod	Set up job	2026-11-27T09:34:21.4785280Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+Deploy to prod	Set up job	2026-11-27T09:34:21.4786272Z Build Date: 2026-11-11T01:49:01Z
+Deploy to prod	Set up job	2026-11-27T09:34:21.4787890Z Worker ID: {5e1cf1ea-c1c7-47bd-9cb8-ffba89ee67a4}
+Deploy to prod	Set up job	2026-11-27T09:34:21.4788861Z Region: centralus
+Deploy to prod	Set up job	2026-11-27T09:34:21.4789572Z Cloud: Azure
+Deploy to prod	Set up job	2026-11-27T09:34:21.4790458Z ##[endgroup]
+Deploy to prod	Set up job	2026-11-27T09:34:21.4792077Z ##[group]Operating System
+Deploy to prod	Set up job	2026-11-27T09:34:21.4792884Z Ubuntu
+Deploy to prod	Set up job	2026-11-27T09:34:21.4793496Z 26.04.1
+Deploy to prod	Set up job	2026-11-27T09:34:21.4794179Z LTS
+Deploy to prod	Set up job	2026-11-27T09:34:21.4794839Z ##[endgroup]
+Deploy to prod	Set up job	2026-11-27T09:34:21.4795484Z ##[group]Runner Image
+Deploy to prod	Set up job	2026-11-27T09:34:21.4796283Z Image: ubuntu-26.04
+Deploy to prod	Set up job	2026-11-27T09:34:21.4796952Z Version: 20261116.202.1
+Deploy to prod	Set up job	2026-11-27T09:34:21.4798506Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.202/images/ubuntu/Ubuntu2604-Readme.md
+Deploy to prod	Set up job	2026-11-27T09:34:21.4800587Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.202
+Deploy to prod	Set up job	2026-11-27T09:34:21.4801809Z ##[endgroup]
+Deploy to prod	Set up job	2026-11-27T09:34:21.4803181Z ##[group]GITHUB_TOKEN Permissions
+Deploy to prod	Set up job	2026-11-27T09:34:21.4805530Z Contents: read
+Deploy to prod	Set up job	2026-11-27T09:34:21.4806230Z Metadata: read
+Deploy to prod	Set up job	2026-11-27T09:34:21.4807012Z ##[endgroup]
+Deploy to prod	Set up job	2026-11-27T09:34:21.4809658Z Secret source: Actions
+Deploy to prod	Set up job	2026-11-27T09:34:21.4810982Z Cache mode: write
+Deploy to prod	Set up job	2026-11-27T09:34:21.4812131Z Prepare workflow directory
+Deploy to prod	Set up job	2026-11-27T09:34:21.5312561Z Prepare all required actions
+Deploy to prod	Set up job	2026-11-27T09:34:21.5374806Z Getting action download info
+Deploy to prod	Set up job	2026-11-27T09:34:21.7898847Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Deploy to prod	Set up job	2026-11-27T09:34:21.8689593Z Download action repository 'hashicorp/setup-terraform@v3' (SHA:b9cd54a3c349d3f38e8881555d616ced269862dd)
+Deploy to prod	Set up job	2026-11-27T09:34:22.2927884Z Complete job name: Deploy to prod
+Deploy to prod	Run actions/checkout@v4	﻿2026-11-27T09:34:22.3619843Z ##[group]Run actions/checkout@v4
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3620753Z with:
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3621159Z   repository: manreett/ACS730
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3624271Z   token: ***
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3624688Z   ssh-strict: true
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3625076Z   ssh-user: git
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3625469Z   persist-credentials: true
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3625893Z   clean: true
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3626293Z   sparse-checkout-cone-mode: true
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3626736Z   fetch-depth: 1
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3627241Z   fetch-tags: false
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3627633Z   show-progress: true
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3628015Z   lfs: false
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3628366Z   submodules: false
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3628750Z   set-safe-directory: true
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3629172Z   allow-unsafe-pr-checkout: false
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3629776Z env:
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3630185Z   AWS_ACCESS_KEY_ID: ***
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3630709Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3635420Z   AWS_SESSION_TOKEN: ***
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3635854Z   AWS_DEFAULT_REGION: us-east-1
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.3636341Z ##[endgroup]
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5704209Z Syncing repository: manreett/ACS730
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5706964Z ##[group]Getting Git version info
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5708014Z Working directory is '/home/runner/work/ACS730/ACS730'
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5709414Z [command]/usr/bin/git version
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5710283Z git version 2.56.1
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5712924Z ##[endgroup]
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5718784Z Temporarily overriding HOME='/home/runner/work/_temp/93db2f36-a269-48bc-b27c-0d63f1078906' before making global git config changes
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5720646Z Adding repository directory to the temporary git global config as a safe directory
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5722086Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ACS730/ACS730
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5768693Z Deleting the contents of '/home/runner/work/ACS730/ACS730'
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5778157Z ##[group]Initializing the repository
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5779254Z [command]/usr/bin/git init /home/runner/work/ACS730/ACS730
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5856476Z hint: Using 'master' as the name for the initial branch. This default branch name
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5858558Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5859936Z hint: to use in all of your new repositories, which will suppress this warning,
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5861342Z hint: call:
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5861896Z hint:
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5862620Z hint: 	git config --global init.defaultBranch <name>
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5863388Z hint:
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5864102Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5865194Z hint: 'development'. The just-created branch can be renamed via this command:
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5866091Z hint:
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5866615Z hint: 	git branch -m <name>
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5867525Z hint:
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5868276Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5869495Z Initialized empty Git repository in /home/runner/work/ACS730/ACS730/.git/
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5878268Z [command]/usr/bin/git remote add origin https://github.com/manreett/ACS730
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5928622Z ##[endgroup]
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5929519Z ##[group]Disabling automatic garbage collection
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5932123Z [command]/usr/bin/git config --local gc.auto 0
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5967788Z ##[endgroup]
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5968798Z ##[group]Setting up auth
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.5975410Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.6011376Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.6464922Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.6491946Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.6748552Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.6781335Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.7036853Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.7244750Z ##[endgroup]
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.7245643Z ##[group]Fetching the repository
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:22.7252959Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d31765e51e006e6602728d3b80c7aa2ff95b3668:refs/remotes/origin/main
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:23.2449877Z From https://github.com/manreett/ACS730
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:23.2455480Z  * [new ref]         d31765e51e006e6602728d3b80c7aa2ff95b3668 -> origin/main
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:23.2458385Z ##[endgroup]
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:23.2459436Z ##[group]Determining the checkout info
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:23.2460970Z ##[endgroup]
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:23.2461766Z [command]/usr/bin/git sparse-checkout disable
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:23.2515128Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:23.2550155Z ##[group]Checking out the ref
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:23.2560497Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:23.2711073Z Switched to a new branch 'main'
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:23.2713852Z branch 'main' set up to track 'origin/main'.
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:23.2722162Z ##[endgroup]
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:23.2767752Z [command]/usr/bin/git log -1 --format=%H
+Deploy to prod	Run actions/checkout@v4	2026-11-27T09:34:23.2793711Z d31765e51e006e6602728d3b80c7aa2ff95b3668
+Deploy to prod	Run hashicorp/setup-terraform@v3	﻿2026-11-27T09:34:23.3069196Z ##[group]Run hashicorp/setup-terraform@v3
+Deploy to prod	Run hashicorp/setup-terraform@v3	2026-11-27T09:34:23.3070456Z with:
+Deploy to prod	Run hashicorp/setup-terraform@v3	2026-11-27T09:34:23.3071281Z   terraform_version: 1.10.5
+Deploy to prod	Run hashicorp/setup-terraform@v3	2026-11-27T09:34:23.3072271Z   terraform_wrapper: false
+Deploy to prod	Run hashicorp/setup-terraform@v3	2026-11-27T09:34:23.3073551Z   cli_config_credentials_hostname: app.terraform.io
+Deploy to prod	Run hashicorp/setup-terraform@v3	2026-11-27T09:34:23.3074733Z env:
+Deploy to prod	Run hashicorp/setup-terraform@v3	2026-11-27T09:34:23.3075858Z   AWS_ACCESS_KEY_ID: ***
+Deploy to prod	Run hashicorp/setup-terraform@v3	2026-11-27T09:34:23.3077300Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy to prod	Run hashicorp/setup-terraform@v3	2026-11-27T09:34:23.3090134Z   AWS_SESSION_TOKEN: ***
+Deploy to prod	Run hashicorp/setup-terraform@v3	2026-11-27T09:34:23.3091108Z   AWS_DEFAULT_REGION: us-east-1
+Deploy to prod	Run hashicorp/setup-terraform@v3	2026-11-27T09:34:23.3092055Z ##[endgroup]
+Deploy to prod	Run hashicorp/setup-terraform@v3	2026-11-27T09:34:23.4324688Z (node:2187) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Deploy to prod	Run hashicorp/setup-terraform@v3	2026-11-27T09:34:23.4328635Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Deploy to prod	Run hashicorp/setup-terraform@v3	2026-11-27T09:34:23.6781269Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/35a7fb7d-fa85-42d4-80c3-4273f38d3f98
+Deploy to prod	Terraform Init	﻿2026-11-27T09:34:24.2025018Z ##[group]Run terraform init -input=false
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.2025510Z ^[[36;1mterraform init -input=false^[[0m
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.2063464Z shell: /usr/bin/bash -e {0}
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.2063794Z env:
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.2064291Z   AWS_ACCESS_KEY_ID: ***
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.2064639Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.2067801Z   AWS_SESSION_TOKEN: ***
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.2068061Z   AWS_DEFAULT_REGION: us-east-1
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.2068326Z ##[endgroup]
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.2386126Z ^[[0m^[[1mInitializing the backend...^[[0m
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.6228492Z ^[[0m^[[32m
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.6229116Z Successfully configured the backend "s3"! Terraform will automatically
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.6229791Z use this backend unless the backend configuration changes.^[[0m
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.8395586Z ^[[0m^[[1mInitializing modules...^[[0m
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.8431447Z - web_stack in ../modules/web-stack
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.8442808Z ^[[0m^[[1mInitializing provider plugins...^[[0m
+Deploy to prod	Terraform Init	2026-11-27T09:34:24.8443532Z - Reusing previous version of hashicorp/aws from the dependency lock file
+Deploy to prod	Terraform Init	2026-11-27T09:34:25.1265721Z - Installing hashicorp/aws v5.100.0...
+Deploy to prod	Terraform Init	2026-11-27T09:34:31.0798543Z - Installed hashicorp/aws v5.100.0 (signed by HashiCorp)
+Deploy to prod	Terraform Init	2026-11-27T09:34:31.0799146Z 
+Deploy to prod	Terraform Init	2026-11-27T09:34:31.0799732Z ^[[0m^[[1m^[[32mTerraform has been successfully initialized!^[[0m^[[32m^[[0m
+Deploy to prod	Terraform Init	2026-11-27T09:34:31.0800263Z ^[[0m^[[32m
+Deploy to prod	Terraform Init	2026-11-27T09:34:31.0800712Z You may now begin working with Terraform. Try running "terraform plan" to see
+Deploy to prod	Terraform Init	2026-11-27T09:34:31.0801399Z any changes that are required for your infrastructure. All Terraform commands
+Deploy to prod	Terraform Init	2026-11-27T09:34:31.0802053Z should now work.
+Deploy to prod	Terraform Init	2026-11-27T09:34:31.0802305Z 
+Deploy to prod	Terraform Init	2026-11-27T09:34:31.0802726Z If you ever set or change modules or backend configuration for Terraform,
+Deploy to prod	Terraform Init	2026-11-27T09:34:31.0803357Z rerun this command to reinitialize your working directory. If you forget, other
+Deploy to prod	Terraform Init	2026-11-27T09:34:31.0804094Z commands will detect it and remind you to do so if necessary.^[[0m
+Deploy to prod	Terraform Validate	﻿2026-11-27T09:34:31.0848873Z ##[group]Run terraform validate
+Deploy to prod	Terraform Validate	2026-11-27T09:34:31.0849158Z ^[[36;1mterraform validate^[[0m
+Deploy to prod	Terraform Validate	2026-11-27T09:34:31.0880593Z shell: /usr/bin/bash -e {0}
+Deploy to prod	Terraform Validate	2026-11-27T09:34:31.0880864Z env:
+Deploy to prod	Terraform Validate	2026-11-27T09:34:31.0881175Z   AWS_ACCESS_KEY_ID: ***
+Deploy to prod	Terraform Validate	2026-11-27T09:34:31.0881485Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy to prod	Terraform Validate	2026-11-27T09:34:31.0884252Z   AWS_SESSION_TOKEN: ***
+Deploy to prod	Terraform Validate	2026-11-27T09:34:31.0884473Z   AWS_DEFAULT_REGION: us-east-1
+Deploy to prod	Terraform Validate	2026-11-27T09:34:31.0884687Z ##[endgroup]
+Deploy to prod	Terraform Validate	2026-11-27T09:34:32.9559969Z ^[[32m^[[1mSuccess!^[[0m The configuration is valid.
+Deploy to prod	Terraform Validate	2026-11-27T09:34:32.9578066Z ^[[0m
+Deploy to prod	Terraform Plan	﻿2026-11-27T09:34:32.9670114Z ##[group]Run terraform plan -input=false -out=tfplan
+Deploy to prod	Terraform Plan	2026-11-27T09:34:32.9670490Z ^[[36;1mterraform plan -input=false -out=tfplan^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:32.9699819Z shell: /usr/bin/bash -e {0}
+Deploy to prod	Terraform Plan	2026-11-27T09:34:32.9700057Z env:
+Deploy to prod	Terraform Plan	2026-11-27T09:34:32.9700389Z   AWS_ACCESS_KEY_ID: ***
+Deploy to prod	Terraform Plan	2026-11-27T09:34:32.9700690Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy to prod	Terraform Plan	2026-11-27T09:34:32.9703461Z   AWS_SESSION_TOKEN: ***
+Deploy to prod	Terraform Plan	2026-11-27T09:34:32.9703683Z   AWS_DEFAULT_REGION: us-east-1
+Deploy to prod	Terraform Plan	2026-11-27T09:34:32.9703907Z ##[endgroup]
+Deploy to prod	Terraform Plan	2026-11-27T09:34:35.8080168Z ^[[0m^[[1mmodule.web_stack.data.aws_ami.al2023: Reading...^[[0m^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:35.8082212Z ^[[0m^[[1mmodule.web_stack.data.aws_availability_zones.available: Reading...^[[0m^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:35.8083394Z ^[[0m^[[1mmodule.web_stack.data.aws_region.current: Reading...^[[0m^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:35.8084840Z ^[[0m^[[1mmodule.web_stack.aws_vpc.main: Refreshing state... [id=vpc-0acef1a7570ca48ec]^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:35.8086126Z ^[[0m^[[1mmodule.web_stack.data.aws_region.current: Read complete after 0s [id=us-east-1]^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:36.0488635Z ^[[0m^[[1mmodule.web_stack.data.aws_availability_zones.available: Read complete after 0s [id=us-east-1]^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:36.3654982Z ^[[0m^[[1mmodule.web_stack.data.aws_ami.al2023: Read complete after 0s [id=ami-062caee4b7b602eb0]^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:36.6706753Z ^[[0m^[[1mmodule.web_stack.aws_internet_gateway.main: Refreshing state... [id=igw-0d8371da9b7829601]^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:36.6708667Z ^[[0m^[[1mmodule.web_stack.aws_subnet.public["b"]: Refreshing state... [id=subnet-037d1a9b7c025458d]^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:36.6710738Z ^[[0m^[[1mmodule.web_stack.aws_security_group.web: Refreshing state... [id=sg-0a58726426d2db591]^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:36.6724935Z ^[[0m^[[1mmodule.web_stack.aws_subnet.public["a"]: Refreshing state... [id=subnet-0f29a09bd669130ce]^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:36.8535177Z ^[[0m^[[1mmodule.web_stack.aws_route_table.public: Refreshing state... [id=rtb-073f419b704ae604c]^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:36.9540744Z ^[[0m^[[1mmodule.web_stack.aws_route_table_association.public["b"]: Refreshing state... [id=rtbassoc-0c79f1308a8509019]^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:36.9542016Z ^[[0m^[[1mmodule.web_stack.aws_route_table_association.public["a"]: Refreshing state... [id=rtbassoc-047e017ee8be6deca]^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:37.0517186Z ^[[0m^[[1mmodule.web_stack.aws_instance.web: Refreshing state... [id=i-043894f33c0197ffc]^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:38.5734684Z 
+Deploy to prod	Terraform Plan	2026-11-27T09:34:38.5735778Z ^[[0m^[[1m^[[32mNo changes.^[[0m^[[1m Your infrastructure matches the configuration.^[[0m
+Deploy to prod	Terraform Plan	2026-11-27T09:34:38.5736196Z 
+Deploy to prod	Terraform Plan	2026-11-27T09:34:38.5736525Z ^[[0mTerraform has compared your real infrastructure against your configuration
+Deploy to prod	Terraform Plan	2026-11-27T09:34:38.5737287Z and found no differences, so no changes are needed.
+Deploy to prod	Terraform Apply	﻿2026-11-27T09:34:38.7021867Z ##[group]Run terraform apply -input=false -auto-approve tfplan
+Deploy to prod	Terraform Apply	2026-11-27T09:34:38.7022291Z ^[[36;1mterraform apply -input=false -auto-approve tfplan^[[0m
+Deploy to prod	Terraform Apply	2026-11-27T09:34:38.7052353Z shell: /usr/bin/bash -e {0}
+Deploy to prod	Terraform Apply	2026-11-27T09:34:38.7052585Z env:
+Deploy to prod	Terraform Apply	2026-11-27T09:34:38.7052893Z   AWS_ACCESS_KEY_ID: ***
+Deploy to prod	Terraform Apply	2026-11-27T09:34:38.7053200Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy to prod	Terraform Apply	2026-11-27T09:34:38.7056211Z   AWS_SESSION_TOKEN: ***
+Deploy to prod	Terraform Apply	2026-11-27T09:34:38.7056449Z   AWS_DEFAULT_REGION: us-east-1
+Deploy to prod	Terraform Apply	2026-11-27T09:34:38.7056665Z ##[endgroup]
+Deploy to prod	Terraform Apply	2026-11-27T09:34:41.3231114Z ^[[0m^[[1m^[[32m
+Deploy to prod	Terraform Apply	2026-11-27T09:34:41.3231815Z Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+Deploy to prod	Terraform Apply	2026-11-27T09:34:41.3288389Z ^[[0m^[[0m^[[1m^[[32m
+Deploy to prod	Terraform Apply	2026-11-27T09:34:41.3288937Z Outputs:
+Deploy to prod	Terraform Apply	2026-11-27T09:34:41.3289096Z 
+Deploy to prod	Terraform Apply	2026-11-27T09:34:41.3289285Z ^[[0mvpc_id = "vpc-0acef1a7570ca48ec"
+Deploy to prod	Terraform Apply	2026-11-27T09:34:41.3289658Z web_instance_id = "i-043894f33c0197ffc"
+Deploy to prod	Terraform Apply	2026-11-27T09:34:41.3290098Z web_url = "http://18.234.194.209/"
+Deploy to prod	Show Outputs	﻿2026-11-27T09:34:41.3391921Z ##[group]Run terraform output
+Deploy to prod	Show Outputs	2026-11-27T09:34:41.3392192Z ^[[36;1mterraform output^[[0m
+Deploy to prod	Show Outputs	2026-11-27T09:34:41.3420489Z shell: /usr/bin/bash -e {0}
+Deploy to prod	Show Outputs	2026-11-27T09:34:41.3420718Z env:
+Deploy to prod	Show Outputs	2026-11-27T09:34:41.3421178Z   AWS_ACCESS_KEY_ID: ***
+Deploy to prod	Show Outputs	2026-11-27T09:34:41.3421478Z   AWS_SECRET_ACCESS_KEY: ***
+Deploy to prod	Show Outputs	2026-11-27T09:34:41.3424224Z   AWS_SESSION_TOKEN: ***
+Deploy to prod	Show Outputs	2026-11-27T09:34:41.3424443Z   AWS_DEFAULT_REGION: us-east-1
+Deploy to prod	Show Outputs	2026-11-27T09:34:41.3424654Z ##[endgroup]
+Deploy to prod	Show Outputs	2026-11-27T09:34:42.2758403Z vpc_id = "vpc-0acef1a7570ca48ec"
+Deploy to prod	Show Outputs	2026-11-27T09:34:42.2777767Z web_instance_id = "i-043894f33c0197ffc"
+Deploy to prod	Show Outputs	2026-11-27T09:34:42.2778152Z web_url = "http://18.234.194.209/"
+Deploy to prod	Post Run actions/checkout@v4	﻿2026-11-27T09:34:42.2884123Z Post job cleanup.
+Deploy to prod	Post Run actions/checkout@v4	2026-11-27T09:34:42.3603393Z [command]/usr/bin/git version
+Deploy to prod	Post Run actions/checkout@v4	2026-11-27T09:34:42.3642421Z git version 2.56.1
+Deploy to prod	Post Run actions/checkout@v4	2026-11-27T09:34:42.3673931Z Temporarily overriding HOME='/home/runner/work/_temp/5f852c92-b2c5-4aaa-9d83-3e5435281e97' before making global git config changes
+Deploy to prod	Post Run actions/checkout@v4	2026-11-27T09:34:42.3675200Z Adding repository directory to the temporary git global config as a safe directory
+Deploy to prod	Post Run actions/checkout@v4	2026-11-27T09:34:42.3678786Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ACS730/ACS730
+Deploy to prod	Post Run actions/checkout@v4	2026-11-27T09:34:42.3716499Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Deploy to prod	Post Run actions/checkout@v4	2026-11-27T09:34:42.3751834Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Deploy to prod	Post Run actions/checkout@v4	2026-11-27T09:34:42.4036983Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Deploy to prod	Post Run actions/checkout@v4	2026-11-27T09:34:42.4065655Z http.https://github.com/.extraheader
+Deploy to prod	Post Run actions/checkout@v4	2026-11-27T09:34:42.4090473Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Deploy to prod	Post Run actions/checkout@v4	2026-11-27T09:34:42.4124992Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Deploy to prod	Post Run actions/checkout@v4	2026-11-27T09:34:42.4387329Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Deploy to prod	Post Run actions/checkout@v4	2026-11-27T09:34:42.4420145Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Deploy to prod	Complete job	﻿2026-11-27T09:34:42.4800797Z Cleaning up orphan processes
+Deploy to prod	Complete job	2026-11-27T09:34:42.5120018Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, hashicorp/setup-terraform@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

@@ -1,0 +1,11 @@
+{
+    "Parameter": {
+        "Name": "/acs730/assignment1/prod/db-password",
+        "Type": "SecureString",
+        "Value": "S3cureAppPass2026!",
+        "Version": 1,
+        "LastModifiedDate": "2026-11-27T09:39:03.393000+00:00",
+        "ARN": "arn:aws:ssm:us-east-1:496177904282:parameter/acs730/assignment1/prod/db-password",
+        "DataType": "text"
+    }
+}

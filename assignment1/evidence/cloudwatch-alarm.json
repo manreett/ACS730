@@ -1,0 +1,35 @@
+{
+    "MetricAlarms": [
+        {
+            "AlarmName": "acs730-a1-prod-mkaur910-high-cpu",
+            "AlarmArn": "arn:aws:cloudwatch:us-east-1:496177904282:alarm:acs730-a1-prod-mkaur910-high-cpu",
+            "AlarmDescription": "Triggers when acs730-a1-prod-mkaur910 EC2 CPU utilization exceeds 80% for 2 minutes.",
+            "AlarmConfigurationUpdatedTimestamp": "2026-11-27T09:41:05.928000+00:00",
+            "ActionsEnabled": true,
+            "OKActions": [],
+            "AlarmActions": [],
+            "InsufficientDataActions": [],
+            "StateValue": "OK",
+            "StateReason": "Threshold Crossed: 2 datapoints [0.17916666666666664 (27/11/26 09:40:00), 0.15998570065743017 (27/11/26 09:35:00)] were not greater than the threshold (80.0).",
+            "StateReasonData": "{\"version\":\"1.0\",\"queryDate\":\"2026-11-27T09:41:45.402+0000\",\"startDate\":\"2026-11-27T09:35:00.000+0000\",\"statistic\":\"Average\",\"period\":60,\"recentDatapoints\":[0.15998570065743017,null,null,null,null,0.17916666666666664],\"threshold\":80.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-11-27T09:40:00.000+0000\",\"sampleCount\":2.0,\"value\":0.17916666666666664}]}",
+            "StateUpdatedTimestamp": "2026-11-27T09:41:45.403000+00:00",
+            "MetricName": "CPUUtilization",
+            "Namespace": "AWS/EC2",
+            "Statistic": "Average",
+            "Dimensions": [
+                {
+                    "Name": "InstanceId",
+                    "Value": "i-043894f33c0197ffc"
+                }
+            ],
+            "Period": 60,
+            "EvaluationPeriods": 2,
+            "Threshold": 80.0,
+            "ComparisonOperator": "GreaterThanThreshold",
+            "TreatMissingData": "notBreaching",
+            "StateTransitionedTimestamp": "2026-11-27T09:41:45.403000+00:00"
+        }
+    ],
+    "CompositeAlarms": [],
+    "LogAlarms": []
+}

@@ -29,3 +29,7 @@ output "web_url" {
 output "artifact_bucket" {
   value = module.web_stack.artifact_bucket
 }
+
+output "cloudwatch_alarm_name" {
+  value = module.web_stack.cloudwatch_alarm_name
+}
